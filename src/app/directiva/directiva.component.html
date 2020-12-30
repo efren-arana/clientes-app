@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<div>
+    <button type="button" class="btn btn-primary my-3" (click) ="setEnable()">
+        {{enable == true ? 'Ocultar' : 'Mostrar'}}
+    </button>
+    <div class="card my-2">
+        <div class="card-header">
+            Listado de lenguajes
+        </div>
+        <ul class="list-group" *ngIf="enable">
+            <li class="list-group-item" *ngFor="let item of listCurso">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+
